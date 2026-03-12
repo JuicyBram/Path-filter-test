@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "test": "jest --config jest.config.js"
+    "test": "jest --config jest.config.js",
+    "test:min": "jest --testPathPatterns=min-service --config jest.config.js",
+    "test:sum": "jest --testPathPatterns=sum-service --config jest.config.js"
   },
   "dependencies": {
     "@types/jest": "^30.0.0",
