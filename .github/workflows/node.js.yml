@@ -7,11 +7,11 @@ on:
   push:
     branches: [ "main", "development" ]
     paths:
-    - 'sum-service/**'
+    - 'main-application/sum-service/**'
   pull_request:
     branches: [ "main", "development" ]
     paths:
-    - 'sum-service/**'
+    - 'main-application/sum-service/**'
 
 jobs:
   build:
@@ -35,6 +35,6 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Run Sum Service Tests
-        working-directory: ./sum-service
+        working-directory: ./main-application/sum-service
         run: |
           npm run test:sum
